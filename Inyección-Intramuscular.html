@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Inyección Intramuscular (IM) - Tipos de Inyecciones</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f0e6;
+            color: black;
+        }
+
+        header {
+            background: rgba(26, 42, 64, 0.92);
+            backdrop-filter: blur(10px);
+            padding: 18px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 28px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        nav a:hover {
+            color: #87ceeb;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin: 25px 70px;
+            padding: 12px 28px;
+            background-color: #1a2a40;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(26, 42, 64, 0.3);
+        }
+
+        .btn-back:hover {
+            background-color: teal;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 110px 10%;
+            background: linear-gradient(to right, #eef6fb, #f8fbfd);
+            gap: 60px;
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h2 {
+            color: #10243e;
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            line-height: 1.9;
+            color: #475569;
+        }
+
+        .hero-image {
+            width: 50%;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 90%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-placeholder {
+            width: 90%;
+            height: 320px;
+            background-color: #dce8f0;
+            border-radius: 15px;
+            border: 3px dashed #87ceeb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a2a40;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .section {
+            padding: 70px;
+        }
+
+        .section-title {
+            color: teal;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section h2 {
+            color: #1a2a40;
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 35px rgba(15, 23, 42, 0.07);
+            line-height: 1.9;
+        }
+
+        .content-placeholder {
+            background-color: #f0f7fb;
+            border: 2px dashed #87ceeb;
+            border-radius: 16px;
+            padding: 30px 40px;
+            color: #1a6a8a;
+            font-style: italic;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .departments {
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+        }
+
+        .icon {
+            font-size: 45px;
+            color: #87ceeb;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #1a2a40;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        ul, ol {
+            line-height: 1.8;
+        }
+
+        .extra-image {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .extra-image img {
+            width: 70%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #1a2a40;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .footer-inner {
+            padding: 0 70px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            line-height: 1.8;
+            display: block;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text,
+            .hero-image {
+                width: 100%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 18px 20px;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+
+            .btn-back {
+                margin: 20px;
+            }
+
+            .extra-image img {
+                width: 100%;
+            }
+
+            .footer-inner {
+                padding: 0 20px;
+            }
+
+            .hero-text h2 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ingeniería Biomédica: Tipos de Inyecciones</h1>
+    <nav>
+        <a href="index.html">Página principal </a><a href="#inicio">Inicio</a> <a href="#conceptos">Conceptos</a>
+        <a href="#tecnica">Aplicación</a>
+        <a href="#fundamento">Sitios Anatómicos</a>
+        <a href="#riesgos">Consideraciones</a>
+        <a href="#aplicaciones">Contenido Adicional</a>
+    </nav>
+</header>
+
+
+<a href="index.html">← Regresar al Inicio</a>
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <h2>Inyección Intramuscular (IM)</h2>
+      <p>
+La inyección intramuscular es la administración de medicamentos directamente dentro de un músculo  para una absorción rápida y eficaz. Permite aplicar fármacos que no pueden darse vía oral o que requieren acción veloz.</p>
+    </div>
+    <div class="hero-image">
+       <img src="Imagenes/intramuscularrr.png" width="200" height="550" alt="Imagen Inyección">
+    </div>
+</section>
+
+
+
+<section class="section" id="conceptos">
+    <p class="section-title">Conceptos básicos</p>
+    
+  <h2>¿Qué es la inyección intramuscular?</h2>
+    <div class="info-box">Cuando se administra una inyección intramuscular, el medicamento se deposita en el tejido muscular, el cual cuenta con una basta red de vasos sanguíneos que permite que el fármaco se absorba directamente hacia el torrente sanguíneo por difusión pasiva. Al ingresar directo a la circulación, evita el paso inicial por el sistema digestivo y el hígado, logrando que una mayor cantidad de la sustancia activa se distribuya rápidamente por todo el cuerpo para hacer efecto y a medida que la sangre continúa circulando, el medicamento es procesado de forma gradual por el hígado y eliminado de manera definitiva a través de los riñones mediante la orina.
+    </div>
+    <div style="margin-top: 40px; text-align: center;">
+		<img src="Imagenes/Intramuscular.png" width="550" height="500" alt="Inyecciones Sitios">
+    </div>
+</section>
+
+
+
+<section class="section" id="tecnica">
+    <p class="section-title">Técnica de aplicación</p>
+    
+    <h2>Pasos para aplicar la inyección intramuscular</h2>
+    <div class="info-box">
+        <ol>
+            <li>Asegúrese de que tiene la cantidad correcta del medicamento adecuado en la jeringa.</li>
+			<li> Lávese bien las manos con agua y jabón. Séquelas. </li>
+            <li>Con cuidado, encuentre el lugar en el que aplicará la inyección.</li>
+            <li>Limpie la piel en ese punto con un algodón con alcohol. Déjelo secar.</li>
+            <li>Tome la tapa de la aguja.</li>
+			<li> Agarre el músculo en el área con los dedos pulgar e índice.</li>
+			<li>Con firmeza, coloque la aguja en el músculo recto hacia arriba y abajo en un ángulo de 90 grados. </li>
+			<li>Empuje el medicamento en el músculo.</li>
+			<li>Retire la aguja en línea recta.</li>
+			<li>Presione el área con la bola de algodón.</li>
+			<li>Si tiene que dar más de una inyección, no se debe poner en el mismo lugar. Use otra parte del cuerpo u otro sitio.</li>
+        </ol>
+    </div>
+</section>
+
+
+
+<section class="section" id="fundamento">
+    <p class="section-title">&nbsp;</p>
+   
+    <h2>Sitios anatómicos</h2>
+    <div class="info-box">
+      <p>Los sitios anatómicos deben seleccionarse cuidadosamente para las inyecciones intramusculares e incluyen el ventroglúteo, vasto lateral y deltoides. El sitio vasto lateral es preferible para los bebés porque ese músculo está más desarrollado. El sitio ventroglúteo generalmente se recomienda para la administración de medicamentos IM en adultos, pero las vacunas IM pueden administrarse en el sitio deltoides. </p>
+		
+      <p><strong>Vasto lateral</strong></p>
+      <ul>
+			<li> Buen lugar para aplicarse una inyección uno mismo o a niños de menos de 3 años.</li> 
+			<li> Mirando el muslo dividalo en 3 partes iguales.</li>
+			<li> Aplique la inyección en la mitad del muslo.</li>
+	  </ul>
+      <p><strong>Ventroglúteo</strong></p>
+      <ul>
+			<li>La cadera es un buen lugar para dar una inyección en adultos y niños mayores de 7 meses.</li>
+			<li>Indíquele a la persona que se recueste de lado. Ponga la parte de abajo de su mano en el lugar en el que el muslo se encuentra con la nalga. Su pulgar debe apuntar a la ingle de la persona y los dedos a la cabeza de la persona.</li>
+			<li>Empuje  su  dedo índice lejos de los otros dedos, formando una V. Deber de sentir el borde de un hueso en la punta de su dedo índice.</li>
+			<li>Ponga la inyección en el medio de la V, entre su primer y segundo dedo. </li>
+	  </ul>
+      <p><strong>Deltoides</strong></p>
+      <ul>
+			<li>Se puede utilizar el músculo del brazo superior si se puede sentir el músculo allí. Si la persona es muy delgada o el músculo es muy pequeño, no use ese sitio.</li>
+	  </ul>
+      <p><strong>Dorsoglúteo</strong></p>
+      <ul>
+			<li>No use este sitio para un niño menor de 3 años, porque todavía no hay suficiente músculo allí. Mida este sitio cuidadosamente, porque una inyección dada en el lugar equivocado podría golpear un nervio o un vaso sanguíneo.</li>
+			<li>Descubra una nalga. Imagínese una línea desde la parte inferior de la nalga hasta la parte superior del hueso de la cadera. Estas dos líneas forman una caja dividida en 4 partes.</li>
+			<li>Ponga la inyección en la parte superior externa de las nalgas, debajo del hueso curvado.&nbsp;</li>
+	  </ul>
+    </div>
+</section>
+
+
+
+<section class="section" id="riesgos">
+    <p class="section-title">&nbsp;</p>
+  
+    <h2>Consideraciones de la inyección IM</h2>
+    <div class="info-box">
+        <ul>
+			<li>Evite usar sitios con músculo atrofiado porque absorberán mal los medicamentos. </li>
+			<li>Si se administran inyecciones IM repetidas, los sitios deben rotarse para disminuir el riesgo de hipertrofia. </li>
+			<li>Los adultos mayores y los pacientes delgados solo pueden tolerar hasta 2 mililitros en una sola inyección. </li>
+			<li>Elija un sitio que esté libre de dolor, infección, abrasiones o necrosis. </li>
+			<li>Se debe evitar el sitio dorsoglúteo para inyecciones intramusculares debido al riesgo de lesión. Si la aguja golpea inadvertidamente el nervio ciático, el paciente puede experimentar parálisis parcial o permanente de la pierna. </li>
+		</ul>
+    </div>
+</section>
+
+
+
+<section class="section" id="aplicaciones">
+  <p class="section-title">&nbsp;</p>
+   
+    <h2>Contenido adicional&nbsp;</h2>
+    <div class="info-box">
+		Video sobre el tema:
+		<a href="https://youtu.be/5N-VfvA8EU8?si=0FNq2vj4bK_XuyVh" target="_blank"> 
+ADMINISTRACIÓN DE MEDICAMENTOS VÍA INTRAMUSCULAR</a>
+		<br>
+	    Cuestionario de repaso:&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLScnYD4QGzo2RC9fU4utoWTd6Pjv99i_Q9Pu_pFurG2V9KQ43A/viewform?usp=header" target="_blank"> Inyección Intramuscular</a>
+    </div>
+</section>
+
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Referencias</h3>
+                <a href="https://medlineplus.gov/spanish/ency/patientinstructions/000935.htm" target="_blank">Aplicando una inyección IM (intramuscular)</a>
+                <a href="https://espanol.libretexts.org/Bookshelves/Salud/Enfermeria/Habilidades_de_Enfermeria_(OpenRN)/18%3A_Administraci%C3%B3n_de_Medicamentos_Parenterales/18.06%3A_Administraci%C3%B3n_de_Medicamentos_Intramusculares" target="_blank">Administración de Medicamentos Intramusculares</a>
+                <a href="https://ocrc.net/how-does-the-body-metabolize-medication/" target="_blank">¿Cómo metaboliza el cuerpo los medicamentos?</a>
+                <a href="https://www.cdc.gov" target="_blank">CDC - Seguridad relacionada con las inyecciones</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <a href="index.html">Página principal</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#conceptos">Conceptos</a>
+                <a href="#tecnica">Aplicación</a>
+                <a href="#fundamento">Sitios Anatómicos</a>
+                <a href="#riesgos">Consideraciones</a>
+                <a href="#aplicaciones">Contenido Adicional</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Autores</h3>
+                <p>Josué Miguel López Bañuelos</p>
+                <p>Gael Santiago Rivera Cadena</p>
+                <p>Melani Guadalupe Velazquez Santiago</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Página informativa sobre tipos de inyecciones — Ingeniería Biomédica</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

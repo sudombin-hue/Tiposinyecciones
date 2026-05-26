@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Inyección Subcutánea (SC) - Tipos de Inyecciones</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f0e6;
+            color: black;
+        }
+
+		.Tabla {
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+}
+
+.Tabla th,
+.Tabla td {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.Tabla thead th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.Tabla tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+        header {
+            background: rgba(26, 42, 64, 0.92);
+            backdrop-filter: blur(10px);
+            padding: 18px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 28px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        nav a:hover {
+            color: #87ceeb;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin: 25px 70px;
+            padding: 12px 28px;
+            background-color: #1a2a40;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(26, 42, 64, 0.3);
+        }
+
+        .btn-back:hover {
+            background-color: teal;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 110px 10%;
+            background: linear-gradient(to right, #eef6fb, #f8fbfd);
+            gap: 60px;
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h2 {
+            color: #10243e;
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            line-height: 1.9;
+            color: #475569;
+        }
+
+        .hero-image {
+            width: 50%;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 90%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-placeholder {
+            width: 90%;
+            height: 320px;
+            background-color: #dce8f0;
+            border-radius: 15px;
+            border: 3px dashed #87ceeb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a2a40;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .section {
+            padding: 70px;
+        }
+
+        .section-title {
+            color: teal;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section h2 {
+            color: #1a2a40;
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 35px rgba(15, 23, 42, 0.07);
+            line-height: 1.9;
+        }
+
+        .content-placeholder {
+            background-color: #f0f7fb;
+            border: 2px dashed #87ceeb;
+            border-radius: 16px;
+            padding: 30px 40px;
+            color: #1a6a8a;
+            font-style: italic;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .departments {
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+        }
+
+        .icon {
+            font-size: 45px;
+            color: #87ceeb;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #1a2a40;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        ul, ol {
+            line-height: 1.8;
+        }
+
+        .extra-image {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .extra-image img {
+            width: 70%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #1a2a40;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .footer-inner {
+            padding: 0 70px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            line-height: 1.8;
+            display: block;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text,
+            .hero-image {
+                width: 100%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 18px 20px;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+
+            .btn-back {
+                margin: 20px;
+            }
+
+            .extra-image img {
+                width: 100%;
+            }
+
+            .footer-inner {
+                padding: 0 20px;
+            }
+
+            .hero-text h2 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ingeniería Biomédica: Tipos de Inyecciones</h1>
+    <nav>
+        <a href="index.html">Página principal </a><a href="#inicio">Inicio</a> <a href="#conceptos">Conceptos</a>
+        <a href="#tecnica">Aplicación</a>
+        <a href="#fundamento">Fundamentos</a>
+        <a href="#aplicaciones">Contenido Adicional</a>
+    </nav>
+</header>
+
+
+<a href="index.html">← Regresar al Inicio</a>
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <h2>Inyección Subcutánea (SC)</h2>
+      <p>
+Una inyección subcutánea    significa que se aplica en el tejido adiposo, justo bajo la piel. Una inyección subcutánea es la mejor manera de administrarse ciertos medicamentos, como la insulina,&nbsp; anticoagulantes y fármacos para la fecundidad.</p>
+    </div>
+    <div class="hero-image">
+      <img src="Imagenes/ViaSubcutanea.jpg" alt="Imagen médica - Inyección Subcutánea">
+    </div>
+</section>
+
+
+
+<section class="section" id="conceptos">
+    <p class="section-title">Conceptos básicos</p>
+   
+  <h2>¿Qué es la inyección subcutánea?</h2>
+    <div class="info-box">En una inyección subcutánea, el medicamento se deposita en el tejido adiposo ubicado  debajo de la piel y por encima del músculo. El fármaco&nbsp; se disuelve lentamente en el líquido intersticial circundante. De ahí, las moléculas del medicamento atraviesan de forma gradual las paredes de los capilares sanguíneos y vasos linfáticos locales mediante difusión pasiva. Permitiendo que el principio activo se libere de manera constante y progresiva hacia la circulación general, evitando picos bruscos en la sangre y prolongando el efecto terapéutico del fármaco en el organismo.
+    </div>
+    <div class="extra-image">
+        <img src="Imagenes/Subcutanea.gif" width="350" height="450" alt="Inyecciones Sitios">
+    </div>
+</section>
+
+
+
+<section class="section" id="tecnica">
+    <p class="section-title">Técnica de aplicación</p>
+    
+  <h2>Pasos para aplicar la inyección subcutánea</h2>
+    <div class="info-box">
+     <ol>
+			<li>Reúna todos los suministros que necesite. Aguja,&nbsp; &nbsp;jeringa,&nbsp; toallitas con alcohol y una curita o vendaje en caso de querer cubrir la zona donde se aplicó la inyección.</li>
+			<li> Comprobar el fármaco prescrito, dosis correcta prescrita y adecuada para el paciente, momento correcto, vía correcta, identidad del paciente. </li>
+            <li>Asegurarse de que no existe contraindicación o alergia al fármaco prescrito.</li>
+            <li>Comprobar la caducidad del fármaco.</li>
+            <li>Cargar la dosis prescrita en la jeringa y desechar la aguja utilizada sin taparla en contenedor de objetos punzantes y/o cortantes.</li>
+			<li> Los sitios para una inyeccion subcutanea son:
+La parte inferior del vientre. Tenga en cuenta que debe mantenerse a dos pulgadas del ombligo.
+El lado o la parte posterior de los brazos.
+La parte frontal de los muslos.
+Si alguien más le está dando la inyección, puede usar la parte baja de su espalda.</li>
+			<li>Tome el pulgar y el índice (señalador) y pellizque la piel. Levante la piel del cuerpo. Pellizcar y tirar suavemente alejará el tejido subcutáneo del músculo. </li>
+			<li>Retire la cubierta de seguridad de la aguja, si está presente. Inserte la aguja directamente en la piel que está pinchando. La aguja se puede insertar en un ángulo de 90 grados (directamente hacia adentro, como un dardo) o en un ángulo de 45 grados. Una vez que la aguja esté dentro, podrá soltar la piel que estaba pellizcando.</li>
+			<li>Mientras mantiene la piel pellizcada, empuje lentamente el émbolo de la jeringa para introducir el medicamento en el tejido subcutáneo.</li>
+			<li>Una vez que haya entrado todo el medicamento, retire la aguja. Si hay un dispositivo de seguridad en la aguja, colóquelo en su lugar de inmediato.</li>
+			<li>Coloque la aguja en el contenedor resistente a las perforaciones.</li>
+			<li>Use la gasa para ejercer una ligera presión en el sitio. Puede poner una tirita o una venda en el sitio si sangra. Puede que tenga algunos moretones.</li>
+			<li>Documente el procedimiento. </li>
+        </ol>
+    </div>
+</section>
+
+
+
+<section class="section" id="fundamento">
+    <p class="section-title">Fundamento fisiológico</p>
+    
+<h2>Fármacos por vía subcutánea</h2>
+  <div class="info-box">
+<p>
+	<br>Consultado en: <a href="https://scielo.isciii.es/pdf/fh/v39n2/02original01.pdf" target="_blank"> https://scielo.isciii.es/pdf/fh/v39n2/02original01.pdf</a>
+<h6>Todos los medicamentos aquí descritos deben ser estrictamente prescritos por un médico colegiado. Bajo ninguna circunstancia se debe iniciar, modificar o suspender un tratamiento sin supervisión médica directa. </h6></p>
+	
+		<p><strong><h3>Manejo de Síntomas Generales y Sedación</h3></strong></p>
+		<table class="Tabla">
+  <thead>
+    <tr>
+      <th>Principio Activo</th>
+      <th>Indicaciones Principales</th>
+      <th>Posología Común</th>
+      <th>Compatibilidades en Jeringa/Infusión</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Butilbromuro de Hioscina (Buscapina)</strong></td>
+      <td>Estertores premortem, secreciones, cólicos.</td>
+      <td>Bolo: 20 mg (prn) Infusión: 20-60 mg/día</td>
+      <td>Morfina, Midazolam, Haloperidol, Clonazepam, Fentanilo.</td>
+    </tr>
+    <tr>
+      <td><strong>Cloruro Mórfico (Morfina)</strong></td>
+      <td>Dolor, disnea, tos, diarrea.</td>
+      <td>0.5 mg/kg/día</td>
+      <td>Buscapina, Midazolam, Haloperidol, Dexametasona, Ketamina.</td>
+    </tr>
+    <tr>
+      <td><strong>Midazolam</strong></td>
+      <td>Convulsiones, sedación, distrés respiratorio.</td>
+      <td>2.5 - 60 mg/24h</td>
+      <td>Buscapina, Morfina, Fentanilo, Haloperidol, Tramadol.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</section>
+
+
+<section class="section" id="aplicaciones">
+    <p class="section-title">&nbsp;</p>
+    
+    <h2>Contenido adicional&nbsp;</h2>
+    <div class="info-box">
+		Video sobre el tema:
+		<a href="https://youtu.be/r2QdRak2XeI?si=wZjQPUxP6LmSyx7K" target="_blank"> ADMINISTRACIÓN DE MEDICAMENTOS VÍA SUBCUTÁNEA</a>
+		<br>Cuestionario de repaso: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCzxwDM2XiLwKz0NAh3kWxdDsTiQTEfDwXyv50ErWhcExuKw/viewform?usp=publish-editor" target="_blank"> Inyección Subcutánea</a>
+    </div>
+</section>
+
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Referencias</h3>
+                <a href="https://es.oncolink.org/tratamiento-del-cancer/quimioterapia/seguridad-de-los-medicamentos/como-aplicar-una-inyeccion-subcutanea" target="_blank">Cómo aplicar una inyección subcutánea</a>
+                <a href="https://opentextbc.ca/clinicalskills/chapter/6-7-intradermal-subcutaneous-and-intramuscular-injections/" target="_blank">Inyecciones intradérmicas y subcutáneas</a>
+                <a href="https://medlineplus.gov/spanish/ency/patientinstructions/000430.htm" target="_blank">Inyecciones subcutáneas (SC)</a>
+                <a href="https://www.cdc.gov" target="_blank">CDC - Seguridad relacionada con las inyecciones</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <a href="index.html">Página principal</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#conceptos">Conceptos</a>
+                <a href="#tecnica">Aplicación</a>
+                <a href="#fundamento">Fundamentos</a>
+                <a href="#aplicaciones">Contenido Adicional</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Autores</h3>
+                <p>Josué Miguel López Bañuelos</p>
+                <p>Gael Santiago Rivera Cadena</p>
+                <p>Melani Guadalupe Velazquez Santiago</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Página informativa sobre tipos de inyecciones — Ingeniería Biomédica</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

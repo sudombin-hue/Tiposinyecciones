@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Inyección Intravenosa (IV) - Tipos de Inyecciones</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f0e6;
+            color: black;
+        }
+
+        header {
+            background: rgba(26, 42, 64, 0.92);
+            backdrop-filter: blur(10px);
+            padding: 18px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 28px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        nav a:hover {
+            color: #87ceeb;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin: 25px 70px;
+            padding: 12px 28px;
+            background-color: #1a2a40;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(26, 42, 64, 0.3);
+        }
+
+        .btn-back:hover {
+            background-color: teal;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 110px 10%;
+            background: linear-gradient(to right, #eef6fb, #f8fbfd);
+            gap: 60px;
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h2 {
+            color: #10243e;
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            line-height: 1.9;
+            color: #475569;
+        }
+
+        .hero-image {
+            width: 50%;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 90%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-placeholder {
+            width: 90%;
+            height: 320px;
+            background-color: #dce8f0;
+            border-radius: 15px;
+            border: 3px dashed #87ceeb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a2a40;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .section {
+            padding: 70px;
+        }
+
+        .section-title {
+            color: teal;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section h2 {
+            color: #1a2a40;
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 35px rgba(15, 23, 42, 0.07);
+            line-height: 1.9;
+        }
+
+        .content-placeholder {
+            background-color: #f0f7fb;
+            border: 2px dashed #87ceeb;
+            border-radius: 16px;
+            padding: 30px 40px;
+            color: #1a6a8a;
+            font-style: italic;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .departments {
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+        }
+
+        .icon {
+            font-size: 45px;
+            color: #87ceeb;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #1a2a40;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        ul, ol {
+            line-height: 1.8;
+        }
+
+        .extra-image {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .extra-image img {
+            width: 70%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #1a2a40;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .footer-inner {
+            padding: 0 70px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            line-height: 1.8;
+            display: block;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text,
+            .hero-image {
+                width: 100%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 18px 20px;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+
+            .btn-back {
+                margin: 20px;
+            }
+
+            .extra-image img {
+                width: 100%;
+            }
+
+            .footer-inner {
+                padding: 0 20px;
+            }
+
+            .hero-text h2 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ingeniería Biomédica: Tipos de Inyecciones</h1>
+    <nav>
+        <a href="index.html">Página principal</a> <a href="#inicio">Inicio</a> <a href="#conceptos">Conceptos</a>
+        <a href="#tecnica">Aplicación</a>
+        <a href="#fundamento">Manejo</a>
+        <a href="#riesgos">Contraindicaciones</a>
+        <a href="#aplicaciones">Usos</a>
+    </nav>
+</header>
+
+
+<a href="index.html">← Regresar al Inicio</a>
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <h2>Inyección Intravenosa (IV)</h2>
+      <p>
+        La inyección intravenosa es un método para administrar medicamentos, líquidos o sangre directamente en una vena a través de una aguja o catéter. Garantiza un efecto inmediato al entrar directo al torrente sanguíneo, siendo común en emergencias y hospitales.</p>
+    </div>
+    <div class="hero-image">
+     <img src="Imagenes/intravenousInjection.jpg" alt="Intravenosa">
+    </div>
+</section>
+
+
+
+<section class="section" id="conceptos">
+    <p class="section-title">&nbsp;</p>
+    <h2>¿Qué es la inyección intravenosa?</h2>
+    <div class="info-box">Un medicamento administrado por vía intravenosa,   entra directamente al torrente sanguíneo con   un efecto casi inmediato, evita por completo la barrera digestiva y el metabolismo inicial del hígado. Una vez en la sangre, el corazón lo bombea   hacia todo el cuerpo, distribuyéndose primero en los órganos con mayor flujo sanguíneo como el cerebro, los pulmones y los propios riñones, antes de pasar al resto de los tejidos. Finalmente el hígado se encarga de metabolizar y transformar químicamente la sustancia para desactivarla, permitiendo que los riñones la filtren y la expulsen    a través de la orina.
+    </div>
+    <div style="margin-top: 40px; text-align: center;">
+       <img src="Imagenes/viaintravenosa.jpg" width="800" height="400" alt="Intravenosa"> 
+    </div>
+</section>
+
+
+
+<section class="section" id="tecnica">
+  <p class="section-title">Técnica de aplicación</p>
+    
+  <h2>Pasos para aplicar la inyección intravenosa</h2>
+    <div class="info-box">
+      <p>Si la administración se va a realizar mediante una inyección en vena:</p>
+      <ul>
+			<li>Coloque el compresor.</li> 
+			<li>Elija una vena de grueso calibre.</li>
+			<li>Inmovilice la vena, sujetándola con el dedo pulgar y traccionando la piel.</li>
+			<li>Inserte la aguja con un ángulo de 30 grados, con el bisel hacia arriba.</li>
+            <li>Aspire lentamente y compruebe si refluye sangre.</li>
+            <li>Retire el compresor e inyecte el fármaco lentamente.</li>
+            <li>Extraiga la aguja y aplique presión con una gasa estéril hasta que deje de sangrar el punto de punción. Si es posible mantenga presión para evitar hematoma.</li>
+	  </ul>
+
+      <p>Si la administración se realiza a través de una vía IV ya colocada:</p>
+      <ul>
+			<li>Compruebe la permeabilidad de la vía.</li>
+			<li>Si hay una perfusión previa, cierre el paso de la misma con la llave de tres pasos.</li>
+			<li>Mantenga la mayor asepsia posible a la hora de introducir el fármaco IV. </li>
+			<li>Abra la llave de tres pasos conectando la vía al fármaco y manteniéndola cerrada al resto del sistema. </li>
+			<li>Introduzca el fármaco lentamente. </li>
+			<li>Después de la inyección abra la llave al resto del sistema y reinicie. Reajuste la velocidad de goteo. </li>
+	  </ul>
+    </div>
+</section>
+
+
+
+<section class="section" id="fundamento">
+    <p class="section-title">&nbsp;</p>
+    <h2>Complicaciones y manejo de la inyección intravenosa</h2>
+    <div class="info-box">
+       <ul>
+			<li>Aguja obstruida: Causada por la formación de un coágulo de sangre en la punta de la aguja, lo que impide la administración del medicamento. El tratamiento consiste en retirar la aguja del lugar de la inyección, empujar el émbolo de la jeringa para liberar la sangre y, si es necesario, cambiar a una aguja nueva. </li>
+			<li>Hinchazón en el lugar de la inyección: Ocurre cuando la aguja perfora la vena o cuando parte del bisel queda parcialmente dentro del vaso y parcialmente fuera. Para controlarla, retire la aguja y vuelva a inyectar; después, aplique una compresa tibia para ayudar a dispersar la sangre acumulada y acelerar la absorción del medicamento. </li>
+			<li>Oclusión vascular: Se produce cuando entra aire en el torrente sanguíneo a través de la jeringa o cuando se inyecta un medicamento oleoso inadecuado. Para evitarlo, asegúrese de que no quede aire en la jeringa antes de administrar el medicamento y evite usar medicamentos incorrectos.&nbsp; </li>
+			<li>Desmayo o pánico del paciente: Es fundamental una preparación psicológica eficaz para los pacientes antes de la inyección intravenosa. Si un paciente se desmaya debido al miedo, a reacciones adversas a la medicación o a repetidos intentos fallidos de encontrar una vena, detenga la inyección y busque asistencia médica.&nbsp; </li>
+			<li>Infección: Debido a una técnica aséptica deficiente o a una cateterización prolongada. Las medidas preventivas para reducir el riesgo de infección incluyen mantener buenas prácticas asépticas antes, durante y después de administrar medicamentos a los pacientes, y tener en cuenta la duración de la cateterización. </li>
+			<li>Necrosis: Causada por la inyección de sustancias contraindicadas para inyección subcutánea o intramuscular fuera de la vena. Los síntomas incluyen calor, enrojecimiento y dolor en el sitio de inyección, inicialmente firme y luego blando. El tratamiento adecuado consiste en compresas calientes; si hay necrosis significativa, debe vendarse ligeramente para prevenir una mayor infección, y las áreas extensas de necrosis pueden requerir incisión y drenaje. </li>
+		   <li>Choque anafiláctico: Causado por la reacción del cuerpo al medicamento administrado. Los síntomas del choque anafiláctico incluyen inquietud, miedo, letargo o coma, pulso rápido y débil, dificultad para respirar, cianosis, picazón, sarpullido y urticaria. La respuesta inmediata es detener la inyección y manejar según el protocolo de emergencia para choque anafiláctico. </li>
+		</ul>
+    </div>
+</section>
+
+
+
+<section class="section" id="riesgos">
+  <p class="section-title">&nbsp;</p>
+   
+    <h2>Contraindicaciones para la inyección intravenosa&nbsp;</h2>
+    <div class="info-box">
+		<ul>
+			<li>Medicamentos liposolubles o fármacos de inyección intravenosa rápida que podrían causar arritmias. </li>
+			<li>Medicamentos que estimulan fuertemente el sistema cardiovascular, como la adrenalina (solo deben administrarse por vía intravenosa en casos de emergencia cuando la presión arterial es críticamente baja o indetectable). </li>
+			<li>Contraindicaciones absolutas para la inyección intravenosa en zonas infectadas o quemadas. </li>
+			<li>Contraindicaciones relativas para la inyección intravenosa en extremidades paralizadas, áreas de edema y articulaciones. </li>
+		</ul>
+    </div>
+</section>
+
+
+
+<section class="section" id="aplicaciones">
+  <p class="section-title">Aplicaciones clínicas</p>
+    
+<h2>Uso clínico de la inyección IV</h2>
+    <div class="info-box">
+       <ul>
+			<li>Pacientes de urgencias. </li>
+			<li>Pacientes desnutridos. </li>
+			<li>Pacientes en estado crítico que requieren efectos farmacológicos rápidos: anestésicos, sedantes, control de hemorragias, tratamiento del shock, etc. </li>
+			<li>Medicamentos que pueden causar necrosis tisular, que no se absorben o que son destruidos por el tracto digestivo. </li>
+		    <li>Medicamentos que no pueden administrarse por vía intramuscular o subcutánea, y que solo pueden administrarse por vía intravenosa.</li>
+			<li>Sangre, plasma y soluciones coloidales como el dextrano. </li>
+			<li>Sueros terapéuticos. </li>
+			<li>Pacientes que no pueden tomar medicamentos por vía oral: aquellos con vómitos persistentes, que requieren preparación prequirúrgica o que muestran una actitud poco colaboradora. </li>
+		</ul>
+    </div>
+</section>
+
+<section class="section" id="aplicacion">
+  <p class="section-title">&nbsp;</p>
+    
+<h2>Contenido adicional</h2>
+    <div class="info-box">
+   Video sobre el tema:
+		<a href="https://youtu.be/1MUIMrWeMpE?si=R2fflXK5hph06Ak5" target="_blank"> ADMINISTRACIÓN DE MEDICAMENTOS VÍA INTRAVENOSA</a>
+		<br>
+	    Cuestionario de repaso:<a href="https://docs.google.com/forms/d/e/1FAIpQLScsBmomTJteYS1aIHFmL3R2mLN1N7WBjQtpfmWjLrYDxJH-YQ/viewform?usp=header" target="_blank"> Inyección Intravenosa</a>
+    </div>
+</section>
+
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Referencias</h3>
+                <a href="https://ocrc.net/how-does-the-body-metabolize-medication/" target="_blank">¿Cómo metaboliza el cuerpo los medicamentos?</a>
+                <a href="https://www.vinmec.com/eng/blog/intravenous-injection-indicated-when-en" target="_blank">¿Cuándo está indicada la inyección intravenosa?</a>
+                <a href="https://www.vinmec.com/eng/blog/instructions-for-intravenous-injection-procedures-en" target="_blank">Guía para la administración de inyecciones intravenosas</a>
+                <a href="https://www.cdc.gov" target="_blank">CDC - Seguridad relacionada con las inyecciones</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <a href="index.html">Página principal</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#conceptos">Conceptos</a>
+                <a href="#tecnica">Aplicación</a>
+                <a href="#fundamento">Manejo</a>
+                <a href="#riesgos">Contraindicaciones</a>
+                <a href="#aplicaciones">Usos</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Autores</h3>
+                <p>Josué Miguel López Bañuelos</p>
+                <p>Gael Santiago Rivera Cadena</p>
+                <p>Melani Guadalupe Velazquez Santiago</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Página informativa sobre tipos de inyecciones — Ingeniería Biomédica</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
