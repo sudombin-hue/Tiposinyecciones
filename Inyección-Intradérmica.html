@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Inyección Intradérmica (ID) - Tipos de Inyecciones</title>
+    <style>
+		
+		.Tabla {
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+}
+
+.Tabla th,
+.Tabla td {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.Tabla thead th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.Tabla tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f0e6;
+            color: black;
+        }
+
+        header {
+            background: rgba(26, 42, 64, 0.92);
+            backdrop-filter: blur(10px);
+            padding: 18px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 28px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        nav a:hover {
+            color: #87ceeb;
+        }
+
+       
+        .btn-back {
+            display: inline-block;
+            margin: 25px 70px;
+            padding: 12px 28px;
+            background-color: #1a2a40;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(26, 42, 64, 0.3);
+        }
+
+        .btn-back:hover {
+            background-color: teal;
+            transform: translateY(-2px);
+        }
+
+    
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 110px 10%;
+            background: linear-gradient(to right, #eef6fb, #f8fbfd);
+            gap: 60px;
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h2 {
+            color: #10243e;
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            line-height: 1.9;
+            color: #475569;
+        }
+
+        .hero-image {
+            width: 50%;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 90%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        .section {
+            padding: 70px;
+        }
+
+        .section-title {
+            color: teal;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section h2 {
+            color: #1a2a40;
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 35px rgba(15, 23, 42, 0.07);
+            line-height: 1.9;
+        }
+
+        .departments {
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+        }
+
+        .icon {
+            font-size: 45px;
+            color: #87ceeb;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #1a2a40;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        ul, ol {
+            line-height: 1.8;
+        }
+
+        .extra-image {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .extra-image img {
+            width: 70%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #1a2a40;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .footer-inner {
+            padding: 0 70px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            line-height: 1.8;
+            display: block;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text,
+            .hero-image {
+                width: 100%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 18px 20px;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+
+            .btn-back {
+                margin: 20px;
+            }
+
+            .extra-image img {
+                width: 100%;
+            }
+
+            .footer-inner {
+                padding: 0 20px;
+            }
+
+            .hero-text h2 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ingeniería Biomédica: Tipos de Inyecciones</h1>
+    <nav>
+        <a href="index.html">Página principal</a> <a href="#inicio">Inicio</a>
+        <a href="#conceptos">Conceptos</a>
+        <a href="#tecnica">Aplicación</a>
+        <a href="#fundamento">Definición&nbsp;</a>
+        <a href="#riesgos">Consideraciones</a>
+        <a href="#aplicaciones">Tipos</a>
+    </nav>
+</header>
+
+
+<a href="index.html">← Regresar al Inicio</a>
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <h2>Inyección Intradérmica (ID)</h2>
+      <p>
+        Una inyección intradérmica es un método que se utiliza para administrar un pequeño volumen de medicamento o sustancia directamente en la dermis , la capa de piel que se encuentra debajo de la superficie.
+    </p> 
+    </div>
+    <div class="hero-image">
+      <img src="Imagenes/Procedemento.jpg" width="1030" height="250" alt="Imagen médica - Inyección Intradérmica">
+    </div>
+</section>
+
+
+<section class="section" id="conceptos">
+    <p class="section-title">Conceptos básicos</p>
+    <h2>Lugares comunes de inyección intradérmica</h2>
+    <div class="info-box"> 
+        <p>
+      <strong> Antebrazo interno (cara interna):</strong> Es el lugar más utilizado para las pruebas de tuberculosis y también para las pruebas de alergia. </p>
+        <p>
+      <strong> Parte superior de la espalda:</strong> Un lugar preferido para las pruebas de alergia, el área de prueba puede abarcar toda la espalda dependiendo de la cantidad de alérgenos analizados y del tamaño de la espalda del cliente. </p>
+    </div>
+	
+	<table class="Tabla">
+  <thead>
+    <tr>
+      <th>Aspecto</th>
+      <th>Intradérmica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Profundidad de inyección</strong></td>
+      <td>En la dermis</td>
+    </tr>
+    <tr>
+      <td><strong>Ángulo de la aguja</strong></td>
+      <td>De 5 a 15 grados</td>
+    </tr>
+    <tr>
+      <td><strong>Tamaño de la aguja</strong></td>
+      <td>Calibre 25 a 27, 1/4 a 1/2 pulgada</td>
+    </tr>
+    <tr>
+      <td><strong>Usos comunes</strong></td>
+      <td>Pruebas de diagnóstico, ciertas vacunas</td>
+    </tr>
+  </tbody>
+</table>
+	
+    <div class="extra-image">
+        <img src="Imagenes/IntradermalInjection.webp" width="250" height="400" alt="Tipos de inyecciones">
+    </div>
+</section>
+
+
+<section class="section" id="tecnica">
+    <p class="section-title">Técnica  de aplicación</p>
+    <h2>Pasos para aplicar una inyección&nbsp;intradérmica</h2>
+    <div class="info-box">
+        <ol>
+            <li>&nbsp;Reunir los suministros. Guantes, medicamentos, una jeringa, una toallita con alcohol y gasas.</li>
+            <li> Comprobar el fármaco prescrito, dosis correcta prescrita y adecuada para el paciente, momento correcto, vía correcta, identidad del paciente. </li>
+            <li>Asegurarse de que no existe contraindicación o alergia al fármaco prescrito.</li>
+            <li>Comprobar la caducidad del fármaco.</li>
+            <li>Cargar la dosis prescrita en la jeringa y desechar la aguja utilizada sin taparla en contenedor de objetos punzantes y/o cortantes.</li>
+            <li>Determinar con el paciente la zona para administrar la medicación: cara interna de antebrazos o en su defecto la parte superior del tórax o en las escápulas y comprobar que sea la piel fina, sin vello ni manchas.</li>
+            <li>Limpiar la piel con la solución antiséptica, siguiendo un movimiento en espiral del centro a la periferia aproximadamente 7 cm y esperar a que esté seca.</li>
+            <li>Asegurar que no hay aire en la jeringa y empujar el émbolo hasta que vea aparecer la solución en el bisel.</li>
+            <li>Tensar la piel con la mano no dominante .</li>
+			<li>Colocar la jeringa de forma que la aguja quede paralela a la piel y con el bisel hacia arriba.</li>
+			<li>Introducir la aguja con el bisel hacia arriba formando un ángulo inferior a 15º y avanzar unos 2mm, con lo que el bisel queda visible bajo la superficie cutánea.</li>
+			<li>Inyectar el fármaco, sin aspirar, comprobando que se forma pápula o vesícula.&nbsp; • Si sangra la zona después de retirar la aguja o si no se ha formado la vesícula, se debe repetir la inyección a una distancia mínima de 10 cm.</li>
+			<li>Retirar suavemente la aguja con el mismo ángulo que se insertó, sin limpiar, frotar ni masajear la zona. El masaje tras la inyección puede dispersar la medicación.</li>
+			<li>Si la inyección intradérmica se realiza para determinar el Test de la Tuberculina (Mantoux) o pruebas de alergia, señalar la zona dibujando un círculo alrededor del perímetro de inserción (de entre 2 y 4 cm de diámetro) para facilitar la lectura posterior de la reacción e informar al paciente que no se lave, ni toque la zona de la punción hasta que no se realice la lectura de la prueba.</li>
+			<li>Documentar el procedimiento.&nbsp;</li>
+        </ol>
+    </div>
+</section>
+
+
+<section class="section" id="fundamento">
+    <p class="section-title">&nbsp;</p>
+    <h2>Definición&nbsp;</h2>
+    <div class="info-box">
+        <p>
+          Las inyecciones intradérmicas (ID) se administran en la dermis, justo debajo de la epidermis. Esta vía de administración tiene el tiempo de absorción más prolongado de todas las vías parenterales. Este tipo de inyecciones se utiliza para pruebas de sensibilidad, como la de tuberculosis , alergias y anestesia local. La ventaja de estas pruebas es que la reacción del organismo es fácil de visualizar y se puede evaluar su grado. Los sitios más comunes son la superficie interna del antebrazo y la parte superior de la espalda, debajo de la escápula. Es importante elegir un sitio de inyección libre de lesiones, erupciones, lunares o cicatrices, ya que estos pueden alterar la observación de los resultados de la prueba.
+      </p>
+        
+    </div>
+</section>
+
+
+
+<section class="section" id="riesgos">
+    <p class="section-title">Complicaciones y riesgos</p>
+    <h2>Consideraciones y consejos de seguridad&nbsp;</h2>
+    <div class="info-box">
+       
+        <ul>
+            <li>Comprobación de alergias: Confirme que el cliente no sea sensible a ninguno de los agentes de prueba ni a los medicamentos.</li>
+            <li>La técnica estéril es fundamental: manipule siempre las agujas y jeringas con guantes estériles para evitar la introducción de infecciones.</li>
+            <li>Siempre con el bisel hacia arriba: Esta técnica ayuda a formar la pápula deseada.</li>
+            <li>Evite la sobrepenetración: inserte solo el bisel para evitar una inyección más profunda.</li>
+          <li>Vigilancia de reacciones alérgicas: Esto es especialmente importante durante las pruebas de alergia.</li>
+          <li> Deseche las agujas correctamente: Siga las pautas para la eliminación de objetos punzantes.</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="section" id="aplicaciones">
+  <p class="section-title">Aplicaciones clínicas</p>
+    <h2>Tipos de inyecciones que requieren administración intradérmica</h2>
+  <div class="info-box">
+    <ul>
+            <li><strong>Prueba cutánea de tuberculosis (TB):</strong> Los profesionales sanitarios utilizan este método, también conocido como prueba cutánea de tuberculina de Mantoux (PPD), para diagnosticar una infección por TB .&nbsp;</li>
+            <li><strong>Pruebas de alergia:</strong> Consisten en introducir pequeñas cantidades de posibles alérgenos debajo de la piel para evaluar las reacciones.</li>
+            <li><strong>Determinadas vacunas:</strong> Las enfermeras pueden administrar algunas vacunas contra la gripe y la rabia por vía intradérmica para poblaciones o protocolos específicos.</li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="section" id="aplicacions">
+  <p class="section-title">&nbsp;</p>
+    <h2>Contenido adicional</h2>
+  <div class="info-box">
+   
+      Video sobre el tema:
+		<a href="https://youtu.be/LN23zeydlRE?si=OVor-wKm-KFjjmTQ" target="_blank"> ADMINISTRACIÓN DE MEDICAMENTOS VÍA INTRADÉRMICA</a>
+		<br>
+	    Cuestionario de repaso:&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSeDjJmwRC_AT6spTHUXNpR5KSTsLNkVoOJGV96R1fts4z245w/viewform?usp=publish-editor" target="_blank"> Inyección Intradérmica</a>
+  </div>
+</section>
+
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Referencias</h3>
+                <a href="https://simplenursing.com/intradermal-injection/#toc6" target="_blank">Inyecciones intradérmicas: técnicas, zonas de aplicación y consejos.</a>
+                <a href="https://manualclinico.hospitaluvrocio.es/procedimientos-generales-de-enfermeria/preparacion-y-administracion-de-tratamiento/preparacion-y-administracion-de-farmacos-via-intradermica/" target="_blank">Preparación y administración de fármacos vía intradérmica</a>
+                <a href="https://opentextbc.ca/clinicalskills/chapter/6-7-intradermal-subcutaneous-and-intramuscular-injections/" target="_blank">Inyecciones intradérmicas y subcutáneas</a>
+                <a href="https://www.cdc.gov" target="_blank">CDC - Seguridad relacionada con las inyecciones</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <a href="index.html">Página principal</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#conceptos">Conceptos</a>
+                <a href="#tecnica">Aplicación</a>
+                <a href="#fundamento">Definición</a>
+                <a href="#riesgos">Consideraciones</a>
+                <a href="#aplicaciones">Tipos</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Autores</h3>
+                <p>Josué Miguel López Bañuelos</p>
+                <p>Gael Santiago Rivera Cadena</p>
+                <p>Melani Guadalupe Velazquez Santiago</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Página informativa sobre tipos de inyecciones — Ingeniería Biomédica</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
